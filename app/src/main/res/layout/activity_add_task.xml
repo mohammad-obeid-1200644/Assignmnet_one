@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddTask"
+android:background="@drawable/fadded_backgroun"
+    >
+
+    <LinearLayout
+        android:id="@+id/ln2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/txttx"
+            style="@style/edtstyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/style1"
+            android:hint="Name Of Task"
+            android:maxLines="1" />
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/duedatetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date: "
+                android:textSize="18sp" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/duedatetxt"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/desc"
+            style="@style/edtstyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/style1"
+            android:hint="Description Of Task"
+            android:maxLines="5" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/chstxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Library: "
+                android:textSize="18sp" />
+
+
+            <Spinner
+                android:id="@+id/spn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/chstxt"
+                android:entries="@array/spnentr" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:gravity="bottom"
+        android:onClick="backclk"
+        android:layout_below="@+id/ln2"
+        android:text="back"
+        android:textSize="24sp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/imgplustxt"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:onClick="layoutclk"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/addbutton"
+            android:id="@+id/addbtn"
+            android:onClick="addimgclk"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/addbtn"
+            android:text="Add New Task"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/style1"
+            android:clickable="true"
+            android:onClick="addtxtclk"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/txtbtn"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

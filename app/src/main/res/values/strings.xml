@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignmnet_one</string>
+    <string-array name="spnentr">
+        <item>Assignments Tasks</item>
+        <item>Projects Tasks</item>
+        <item>Quiz Tasks</item>
+    </string-array>
+    <string name="done">done</string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fadded_backgroun"
+    tools:context=".TasksActivity"
+    >
+
+<ScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/scrllay1"
+    android:layout_marginBottom="20dp"
+    >
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@drawable/backarrow"
+        android:id="@+id/backbtn"
+        android:onClick="backfromtasks"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assignment Tasks"
+        android:layout_toRightOf="@+id/backbtn"
+        style="@style/edtstyle"
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:onClick="ddf"
+        android:id="@+id/txt"
+        android:layout_marginRight="80dp"
+
+        />
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/addbutton"
+        android:id="@+id/addnew"
+        android:onClick="addNewTask"
+        android:layout_toRightOf="@+id/txt"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</RelativeLayout>
+
+
+</ScrollView>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_below="@+id/scrllay1"
+        android:id="@+id/listt"
+        android:choiceMode="multipleChoice"
+        android:layout_weight="1"
+        android:divider="#00FFFF"
+        android:background="@drawable/listviewshape2"
+        android:dividerHeight="1dp"
+        android:textAlignment="center"
+        android:cacheColorHint="#f00000"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed Tasks"
+        android:textSize="18sp"
+        style="@style/edtstyle"
+        android:layout_below="@+id/listt"
+        android:id="@+id/txtcomp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        />
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/garbagebin"
+        android:layout_toRightOf="@+id/txtcomp"
+        android:layout_below="@+id/listt"
+        android:layout_marginLeft="230dp"
+        android:id="@+id/deletebtn"
+        android:onClick="deleteCompletedTasks"
+        android:visibility="gone"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtcomp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/listt2"
+        android:choiceMode="multipleChoice"
+        android:layout_weight="1"
+        android:divider="#00FFFF"
+        android:background="@drawable/listviewshape2"
+        android:dividerHeight="1dp"
+        android:textAlignment="center"
+        android:cacheColorHint="#f00000"
+        android:visibility="gone"
+
+        />
+
+
+</RelativeLayout>
