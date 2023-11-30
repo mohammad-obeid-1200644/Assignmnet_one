@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position==0){
-                    Toast.makeText(MainActivity.this,"Assignments",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(MainActivity.this,"Assignments",Toast.LENGTH_LONG).show();
                     startActivity(Task);
                 }
                 else if(position==1){
-                    Toast.makeText(MainActivity.this,"Not Done Yet",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Not Done Yet",Toast.LENGTH_SHORT).show();
                 }
                 else if(position==2){
-                    Toast.makeText(MainActivity.this,"Not Done Yet",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this,"Not Done Yet",Toast.LENGTH_SHORT).show();
                 }
 
 

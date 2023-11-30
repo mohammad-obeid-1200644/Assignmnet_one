@@ -96,9 +96,11 @@ public class TasksActivity extends AppCompatActivity {
             }
             adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrcomp);
             listviewcomp.setAdapter(adapter);
+            Toast.makeText(this,strcomp.toString(),Toast.LENGTH_LONG).show();
+            if(!strcomp.equals("[]")){
             listviewcomp.setVisibility(View.VISIBLE);
             txt.setVisibility(View.VISIBLE);
-            clearcomp.setVisibility(View.VISIBLE);
+            clearcomp.setVisibility(View.VISIBLE);}
     }
 
 }
@@ -184,7 +186,8 @@ public class TasksActivity extends AppCompatActivity {
     }
 
     public void deleteCompletedTasks(View view) {
-        editor.putString(COMPLETED, "");
+        String x="";
+        editor.putString(COMPLETED, x);
         editor.commit();
         listviewcomp.setVisibility(View.GONE);
         txt.setVisibility(View.GONE);
